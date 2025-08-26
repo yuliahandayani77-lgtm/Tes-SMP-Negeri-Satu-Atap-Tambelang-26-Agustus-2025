@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil <span style="color:red;">Heri Hermawan</span> - Guru TIK</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; margin:0; padding:0; background: #f9fafb; color:#333; }
+
+    /* Navbar dengan animasi zoom */
+    nav { background: linear-gradient(90deg, #2563eb, #1e3a8a); padding:10px 20px; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; }
+    nav ul li { position:relative; }
+    nav ul li a {
+      color:white; padding:12px 18px; display:block; text-decoration:none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background:#1e40af; border-radius:5px; transform: scale(1.15);
+    }
+    nav ul li ul {
+      display:none; position:absolute; top:45px; left:0; background:#1e3a8a; padding:0; min-width:200px;
+      border-radius: 0 0 8px 8px; animation: fadeIn 0.4s ease-in-out;
+    }
+    nav ul li:hover ul { display:block; }
+    nav ul li ul li a:hover { background:#2563eb; transform: scale(1.05); }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform: translateY(-10px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+
+    header { color:#fff; text-align:center; padding:50px 20px; background: linear-gradient(90deg, #2563eb, #1e3a8a); }
+    header h1 { margin:0; font-size:2.8em; animation: zoomIn 1.2s ease; }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity:0; }
+      to { transform: scale(1); opacity:1; }
+    }
+
+    section { padding:50px 20px; max-width:1100px; margin:auto; text-align:center; }
+    h2 { color:#1e3a8a; margin-bottom:20px; }
+
+    /* GIF container */
+    .gif-container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .gif-container img {
+      width:300px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gif-container img:hover { transform: scale(1.1); }
+
+    /* Video */
+    .video-container { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.2); margin-bottom:30px; }
+    .video-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+
+    /* Map */
+    iframe.map { width:100%; height:350px; border:0; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+
+    footer { background:#1e3a8a; color:white; text-align:center; padding:15px; margin-top:30px; }
+  </style>
+</head>
+<body>
+
+<!-- Menu Navigasi -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#tentang">Tentang</a></li>
+    <li>
+      <a href="#galeri">Galeri ▼</a>
+      <ul>
+        <li><a href="#ootd">OOTD Pelajar</a></li>
+        <li><a href="#trend">Trend Dance</a></li>
+        <li><a href="#persahabatan">Momen Persahabatan</a></li>
+      </ul>
+    </li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#lokasi">Lokasi</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <h1><span style="color:red;">Heri Hermawan</span></h1>
+  <p>Guru TIK – SMP Negeri Satu Atap Tambelang</p>
+</header>
+
+<section id="tentang">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah <span style="color:red;">Heri Hermawan</span>, Guru TIK di <span style="color:red;">SMP Negeri Satu Atap Tambelang</span>, Kabupaten Bekasi. Saya mengajarkan literasi digital, pemrograman, desain web, dan keterampilan teknologi.</p>
+</section>
+
+<section id="ootd">
+  <h2>OOTD Pelajar</h2>
+  <div class="gif-container">
+    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="OOTD 1">
+    <img src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif" alt="OOTD 2">
+  </div>
+</section>
+
+<section id="trend">
+  <h2>Trend Dance</h2>
+  <div class="gif-container">
+    <img src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif" alt="Dance 1">
+    <img src="https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif" alt="Dance 2">
+  </div>
+</section>
+
+<section id="persahabatan">
+  <h2>Momen Persahabatan</h2>
+  <div class="gif-container">
+    <img src="https://media.giphy.com/media/3o7TKsQMO4wZ4hP1EI/giphy.gif" alt="Friendship 1">
+    <img src="https://media.giphy.com/media/3o6ZsWc3VVUo3kzzXa/giphy.gif" alt="Friendship 2">
+  </div>
+</section>
+
+<section id="video">
+  <h2>Video Inspirasi – Kasih Ayah</h2>
+  <div class="video-container">
+    <iframe id="videoInsp" src="https://www.youtube.com/embed/-b0cv_-r92c?enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Musik Latar</h2>
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<section id="lokasi">
+  <h2>Lokasi <span style="color:red;">SMP Negeri Satu Atap Tambelang</span></h2>
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.993208446402!2d107.0627287!3d-6.258497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991f3a2a0cbb1%3A0x9e59d589f6b0c2c3!2sSMP%20Negeri%20Satu%20Atap%20Tambelang!5e0!3m2!1sid!2sid!4v1690000000000"></iframe>
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: <b><span style="color:red;">heri171@guru.smp.belajar.id</span></b></p>
+  <p>Telepon/WA: <b><span style="color:red;">085174350873</span></b></p>
+</section>
+
+<footer>&copy; 2025 <span style="color:red;">Heri Hermawan</span>. Semua Hak Dilindungi.</footer>
+
+<script>
+  // YouTube API kontrol musik
+  const bgMusic = document.getElementById("bgMusic");
+  function onYouTubeIframeAPIReady() {
+    new YT.Player('videoInsp', {
+      events: {
+        'onStateChange': (e) => {
+          if (e.data === YT.PlayerState.PLAYING) bgMusic.pause();
+          else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) bgMusic.play();
+        }
+      }
+    });
+  }
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+</script>
+
+</body>
+</html>
